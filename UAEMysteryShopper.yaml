@@ -1259,19 +1259,4 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/RegisterShopperResponse'
-  # /ACEkINrpCeFXORtPZUUtkdf:
-  #   post:
-  #     summary: Retrieve or update shopper profile and rating details
-  #     operationId: getShopperProfile
-  #     requestBody:
-  #       content:
-  #         application/x-www-form-urlencoded:
-  #           schema:
-  #             $ref: '#/components/schemas/ShopperProfileRequest'
-  #     responses:
-  #       '200':
-  #         description: Shopper profile and rating details retrieved
-  #         content:
-  #           application/json:
-  #             schema:
-  #               $ref: '#/components/schemas/ShopperProfileResponse'
+

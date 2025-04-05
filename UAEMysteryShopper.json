@@ -1,0 +1,52 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "UAE Mystery Shopper App API",
+    "description": "API for the UAE Mystery Shopper App, enabling user registration, feedback submission, and service channel management.",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://mysteryshopperapp.ae/webservice/api/appservices",
+      "description": "Production server"
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "TokenAuth": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "Token"
+      }
+    }
+  },
+  "paths": {
+    "/initiatejoinus": {
+      "post": {
+        "summary": "Initiate the join us process for the Mystery Shopper app",
+        "operationId": "initiateJoinUs",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "#/components/schemas/InitiateJoinUsRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful initiation with registration labels",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InitiateJoinUsResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
